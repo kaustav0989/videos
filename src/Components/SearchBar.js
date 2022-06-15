@@ -2,6 +2,7 @@ import React from "react";
 
 class SearchBar extends React.Component{
     state = { term : '' };
+    
 
     onInputChange = event => {
         this.setState( {term : event.target.value} );
@@ -9,6 +10,7 @@ class SearchBar extends React.Component{
 
     onFormSubmit = event => {
         event.preventDefault();
+        //console.log(this);
 
         //TODO : Make sure we call a callback function from parent component
         this.props.onFormSubmitCall(this.state.term);
